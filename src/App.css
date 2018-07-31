@@ -5,3 +5,11 @@
 .App .content {
   padding: 0 10px;
 }
+
+.content-area>div {
+  margin-top: 20px;
+}
+.centered {
+  margin: 0 auto;
+  width: 50%;
+}

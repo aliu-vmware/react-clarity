@@ -1,7 +1,7 @@
 import React from "react";
 import c from "classnames";
 
-const validTypes = ["info", "warning", "success", "danger"];
+//const validTypes = ["info", "warning", "success", "danger"];
 const typeIcons = {
     info: "info-circle",
     warning: "exclamation-triangle",

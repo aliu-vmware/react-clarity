@@ -2,7 +2,7 @@ import React from "react";
 import c from "classnames";
 import getId from "../util/IdGenerator";
 
-class Checkbox extends React.Component {
+class Radio extends React.Component {
     constructor(props) {
         super(props);
         this.compId = getId();
@@ -11,12 +11,12 @@ class Checkbox extends React.Component {
     render() {
         const {className, children, ...props} = this.props;
         return (
-            <div className={c("checkbox", {disabled: props.disabled}, className)}>
-                <input id={`Checkbox-${this.compId}`} type="checkbox" {...props}/>
-                <label htmlFor={`Checkbox-${this.compId}`}>{children}</label>
+            <div className={c("radio", {disabled: props.disabled}, className)}>
+                <input id={`Radio-${this.compId}`} type="radio" {...props}/>
+                <label htmlFor={`Radio-${this.compId}`}>{children}</label>
             </div>
         );
     }
 }
 
-export default Checkbox;
+export default Radio;

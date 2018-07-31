@@ -8,6 +8,7 @@
     "classnames": "^2.2.6",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-overlays": "^0.8.3",
     "react-scripts": "1.1.4"
   },
   "scripts": {
