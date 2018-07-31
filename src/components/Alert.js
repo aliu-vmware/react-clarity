@@ -11,7 +11,6 @@ const typeIcons = {
 
 function Alert ({className, children,
                              type = "info",
-                             closeable = true,
                              small = false,
                              onClose,
                              appLevel = false, ...props}) {
@@ -20,15 +19,15 @@ function Alert ({className, children,
             <div className="alert-items">
                 <div className="alert-item static">
                     <div className="alert-icon-wrapper">
-                        <clr-icon class="alert-icon" shape={typeIcons[type]}></clr-icon>
+                        <clr-icon class="alert-icon" shape={typeIcons[type]}/>
                     </div>
                     <div className="alert-text">
                         {children}
                     </div>
                 </div>
             </div>
-            { closeable ? <button type="button" className="close" aria-label="Close" onClose={onClose}>
-                <clr-icon aria-hidden="true" shape="close"></clr-icon>
+            { onClose ? <button type="button" className="close" aria-label="Close" onClick={onClose}>
+                <clr-icon aria-hidden="true" shape="close"/>
             </button> : null }
         </div>
      );

@@ -2,7 +2,7 @@ import React from "react";
 import c from "classnames";
 import getId from "../util/IdGenerator";
 
-class Checkbox extends React.Component {
+class Toggle extends React.Component {
     constructor(props) {
         super(props);
         this.compId = getId();
@@ -11,7 +11,7 @@ class Checkbox extends React.Component {
     render() {
         const {className, children, ...props} = this.props;
         return (
-            <div className={c("checkbox", className)}>
+            <div className={c("toggle-switch", className)}>
                 <input id={`Checkbox-${this.compId}`} type="checkbox" {...props}/>
                 <label htmlFor={`Checkbox-${this.compId}`}>{children}</label>
             </div>
@@ -19,4 +19,4 @@ class Checkbox extends React.Component {
     }
 }
 
-export default Checkbox;
+export default Toggle;
