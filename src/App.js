@@ -24,6 +24,7 @@ import Sidenav from "./components/Sidenav";
 import ButtonGroup from "./components/ButtonGroup";
 import Select from "./components/Select";
 import Tooltip from "./components/Tooltip";
+import { Dropdown, MenuItem }  from "./components/Dropdown";
 
 class App extends Component {
     constructor(props) {
@@ -136,6 +137,15 @@ class App extends Component {
                             <Tooltip position="top right" icon="info-circle" iconSize="24">
                                 I'm a tooltip!
                             </Tooltip>
+                        </div>
+                        <div>
+                            <Dropdown title="Dropdown">
+                                <MenuItem header>A header</MenuItem>
+                                <MenuItem>Item 1</MenuItem>
+                                <MenuItem>Item 2</MenuItem>
+                                <MenuItem divider/>
+                                <MenuItem onClick={() => alert('hi!')}>Item 3 with alert</MenuItem>
+                            </Dropdown>
                         </div>
                     </div>
                     <Sidenav>
