@@ -23,6 +23,7 @@ import Input from "./components/Input";
 import Sidenav from "./components/Sidenav";
 import ButtonGroup from "./components/ButtonGroup";
 import Select from "./components/Select";
+import Tooltip from "./components/Tooltip";
 
 class App extends Component {
     constructor(props) {
@@ -101,7 +102,7 @@ class App extends Component {
                             <Radio name="radio" value="lobster" disabled>Lobster</Radio>
                         </div>
                         <div>
-                            <Textarea placeholder="Empty text area"></Textarea>
+                            <Textarea placeholder="Empty text area"/>
                         </div>
                         <div className="centered">
                             <Button onClick={this.openModal}>Open Modal</Button>
@@ -130,6 +131,11 @@ class App extends Component {
                                 <option>3</option>
                                 <option>4</option>
                             </Select>
+                        </div>
+                        <div>
+                            <Tooltip position="top right" icon="info-circle" iconSize="24">
+                                I'm a tooltip!
+                            </Tooltip>
                         </div>
                     </div>
                     <Sidenav>

@@ -44,7 +44,7 @@ Tables | :white_check_mark: | styling only
 Tabs | :x: |  
 Text Areas | :white_check_mark: |
 Toggle Switches | :white_check_mark: |
-Tooltips | :x: |
+Tooltips | :white_check_mark: |
 Tree View | :x: |
 Vertical Nav | :x: |
 Wizards | :x: |
