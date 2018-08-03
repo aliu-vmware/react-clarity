@@ -59,7 +59,6 @@ export function MenuItem(props) {
     return (
         <Consumer>
             { (ctx) => {
-                console.log(ctx);
                 return <MenuItemImpl {...props} {...ctx} />;
             } }
         </Consumer>
