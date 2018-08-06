@@ -1,6 +1,6 @@
 import React from "react";
 import c from "classnames";
-
+import {RootCloseWrapper} from "react-overlays";
 import Button from "./Button";
 
 const nestedPositionMap = {
@@ -36,20 +36,22 @@ export class Dropdown extends React.Component {
         console.log(this.ctx);
         return (
             <Provider value={this.ctx}>
-                <div className={c("dropdown", {
-                        open,
-                        [positionMap[position]]: positionMap[position]
-                })}>
-                    <Button className={c("dropdown-toggle", className)} type="button"
-                            onClick={this.handleClick}
-                            {...props}>
-                        {title}
-                        <clr-icon shape="caret down"/>
-                    </Button>
-                    <div className="dropdown-menu">
-                        {children}
+                <RootCloseWrapper onRootClose={this.handleClose} disabled={props.disabled}>
+                    <div className={c("dropdown", {
+                            open,
+                            [positionMap[position]]: positionMap[position]
+                    })}>
+                        <Button className={c("dropdown-toggle", className)} type="button"
+                                onClick={this.handleClick}
+                                {...props}>
+                            {title}
+                            <clr-icon shape="caret down"/>
+                        </Button>
+                        <div className="dropdown-menu">
+                            {children}
+                        </div>
                     </div>
-                </div>
+                </RootCloseWrapper>
             </Provider>
         )
     }

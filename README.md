@@ -23,7 +23,7 @@ Checkboxes | :white_check_mark: |
 Code Highlight | :x: |
 Date Picker | :x: | 
 Datagrid | :x: |
-Dropdowns | :x: |
+Dropdowns | :warning: | Single-level basic case
 Forms (Layout) | :x: |
 Grid | :white_check_mark: |
 Header | :white_check_mark: | 
