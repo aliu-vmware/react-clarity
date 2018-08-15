@@ -26,6 +26,8 @@ import Select from "./components/Select";
 import Tooltip from "./components/Tooltip";
 import { Dropdown, MenuItem }  from "./components/Dropdown";
 import { StackView, StackBlock, StackButton } from "./components/StackView";
+import Signpost from "./components/Signpost";
+import {Tab, Tabs} from "./components/Tabs";
 
 class App extends Component {
     constructor(props) {
@@ -161,6 +163,17 @@ class App extends Component {
                                     <StackBlock label="Sub-Label 3" value="Sub-Content 3"/>
                                 </StackBlock>
                             </StackView>
+                        </div>
+                        <div>
+                            <Signpost>
+                                This is a Signpost!
+                            </Signpost>
+                        </div>
+                        <div>
+                            <Tabs>
+                                <Tab eventKey="i1" title="tab 1">stuff</Tab>
+                                <Tab eventKey="i2" title="tab 2">here</Tab>
+                            </Tabs>
                         </div>
                     </div>
                     <Sidenav>

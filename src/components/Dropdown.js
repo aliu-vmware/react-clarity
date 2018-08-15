@@ -33,7 +33,6 @@ export class Dropdown extends React.Component {
     render() {
         const { className, position, children, title, ...props } = this.props;
         const { open } = this.state;
-        console.log(this.ctx);
         return (
             <Provider value={this.ctx}>
                 <RootCloseWrapper onRootClose={this.handleClose} disabled={props.disabled}>
