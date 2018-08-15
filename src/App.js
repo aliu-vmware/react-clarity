@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "@clr/icons";
+import '@clr/icons/shapes/essential-shapes';
 
 import "@clr/ui/clr-ui.css";
 import "@clr/icons/clr-icons.css";
@@ -26,8 +27,8 @@ import Select from "./components/Select";
 import Tooltip from "./components/Tooltip";
 import { Dropdown, MenuItem }  from "./components/Dropdown";
 import { StackView, StackBlock, StackButton } from "./components/StackView";
-import Signpost from "./components/Signpost";
 import {Tab, Tabs} from "./components/Tabs";
+import VerticalNav from "./components/VerticalNav";
 
 class App extends Component {
     constructor(props) {
@@ -165,15 +166,20 @@ class App extends Component {
                             </StackView>
                         </div>
                         <div>
-                            <Signpost>
-                                This is a Signpost!
-                            </Signpost>
-                        </div>
-                        <div>
                             <Tabs>
                                 <Tab eventKey="i1" title="tab 1">stuff</Tab>
                                 <Tab eventKey="i2" title="tab 2">here</Tab>
                             </Tabs>
+                        </div>
+                        <div>
+                            <VerticalNav collapsible="bottom">
+                                <VerticalNav.Group icon="user" content="Normal" active>
+                                    <VerticalNav.Link href="#" active>Pidgey</VerticalNav.Link>
+                                </VerticalNav.Group>
+                                <VerticalNav.Group icon="bolt" content="Electric">
+                                    <VerticalNav.Link href="#">Pikachu</VerticalNav.Link>
+                                </VerticalNav.Group>
+                            </VerticalNav>
                         </div>
                     </div>
                     <Sidenav>

@@ -25,7 +25,7 @@ Date Picker | :x: |
 Datagrid | :x: |
 Dropdowns | :warning: | Single-level basic case
 Forms (Layout) | :x: |
-Grid | :white_check_mark: |
+Grid | :warning: | No push/pull
 Header | :white_check_mark: | 
 Input Fields | :x: |
 Inputs | :white_check_mark: |
@@ -46,5 +46,5 @@ Text Areas | :white_check_mark: |
 Toggle Switches | :white_check_mark: |
 Tooltips | :white_check_mark: |
 Tree View | :x: |
-Vertical Nav | :x: |
+Vertical Nav | :warning: | Manual active element management.
 Wizards | :x: |
