@@ -39,7 +39,7 @@ Select Boxes | :white_check_mark: |
 Sidenav | :white_check_mark: |
 Signposts | :x: | 
 Spinners | :white_check_mark: |
-Stack View | :x: | 
+Stack View | :white_check_mark: | lazy-loading responsibility of child elements. 
 Tables | :white_check_mark: | styling only
 Tabs | :x: |  
 Text Areas | :white_check_mark: |

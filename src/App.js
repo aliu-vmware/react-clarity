@@ -25,6 +25,7 @@ import ButtonGroup from "./components/ButtonGroup";
 import Select from "./components/Select";
 import Tooltip from "./components/Tooltip";
 import { Dropdown, MenuItem }  from "./components/Dropdown";
+import { StackView, StackBlock, StackButton } from "./components/StackView";
 
 class App extends Component {
     constructor(props) {
@@ -146,6 +147,20 @@ class App extends Component {
                                 <MenuItem divider/>
                                 <MenuItem onClick={() => alert('hi!')}>Item 3 with alert</MenuItem>
                             </Dropdown>
+                        </div>
+                        <div>
+                            <StackView title="Stack View" actions={
+                                <React.Fragment>
+                                    <StackButton>Edit</StackButton>
+                                </React.Fragment>
+                            }>
+                                <StackBlock label="Label 1" value="Content 1"/>
+                                <StackBlock label="Label 2" value="Content 2">
+                                    <StackBlock label="Sub-Label 1" value="Sub-Content 1" changed/>
+                                    <StackBlock label="Sub-Label 2" value="Sub-Content 2"/>
+                                    <StackBlock label="Sub-Label 3" value="Sub-Content 3"/>
+                                </StackBlock>
+                            </StackView>
                         </div>
                     </div>
                     <Sidenav>
