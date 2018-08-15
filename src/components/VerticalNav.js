@@ -10,23 +10,34 @@ export class VerticalNav extends React.Component {
     toggleCollapse = () => this.setState({collapsed : !this.state.collapsed});
 
     //We only care about direct children.
-    hasIcons(children) {
-        return React.Children.toArray(children).find(
-            child => child.props.icon &&
-                    (child.type === VerticalNavLink ||
-                     child.type === VerticalNavGroup)
-        );
+    inspectChildren() {
+        let flags = {};
+        for(let child of React.Children.toArray(this.props.children)) {
+            if(child.type === VerticalNavGroup) {
+                flags.hasGroups = true;
+            }
+            if(child.props.icon &&
+                (child.type === VerticalNavLink ||
+                child.type === VerticalNavGroup)) {
+                flags.hasIcons = true;
+            }
+            if(flags.hasGroups && flags.hasIcons) {
+                break;
+            }
+        }
+        return flags;
     }
+
     render() {
         const { collapsible, children } = this.props;
         const { collapsed } = this.state;
-
-
+        const { hasIcons, hasGroups } = this.inspectChildren();
 
         return (
             <div className={c("clr-vertical-nav", {
                 "nav-trigger--bottom": collapsible === "bottom",
-                "has-icons": this.hasIcons(children),
+                "has-icons": hasIcons,
+                "has-nav-groups": hasGroups,
                 "is-collapsed": collapsed
             })}>
                 {collapsible ?
