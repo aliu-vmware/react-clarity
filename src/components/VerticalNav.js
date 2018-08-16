@@ -74,7 +74,7 @@ class VerticalNavGroup extends React.Component {
         const { active, icon, content, children, className, ...props} = this.props;
         const { collapsed } = this.state;
         return (
-            <div className={c("nav-group", {active})}>
+            <div className={c("nav-group", {active})} {...props}>
                 <div className={c("nav-group-content", className)}>
                     <button className="nav-group-trigger" onClick={this.toggleCollapse}>
                         {icon ? <clr-icon class="nav-icon" shape={icon}/>: null }

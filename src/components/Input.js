@@ -1,6 +1,8 @@
 import React from "react";
 import c from "classnames";
 
-export default function ({className, ...props}) {
-  return (<input className={c("clr-input", className)} {...props}/>);
+function Input({className, ...props}, ref) {
+  return (<input ref={ref} className={c("clr-input", className)} {...props}/>);
 }
+
+export default React.forwardRef(Input);

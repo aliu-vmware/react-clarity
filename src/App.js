@@ -33,11 +33,21 @@ import VerticalNav from "./components/VerticalNav";
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = { checkbox: true, toggle: true };
+        this.state = { checkbox: true, indeterminateBox: { checked: true, indeterminate: false }, toggle: true };
     }
 
     handleCheckbox = () => {
         this.setState({ checkbox: !this.state.checkbox });
+    };
+
+    handleIndeterminateBox = () => {
+        if(this.state.indeterminateBox.checked) {
+            this.setState({ indeterminateBox: { checked: false, indeterminate: false } });
+        } else if(this.state.indeterminateBox.indeterminate) {
+            this.setState({ indeterminateBox: { checked: true, indeterminate: false } });
+        } else {
+            this.setState({ indeterminateBox: { checked: false, indeterminate: true } });
+        }
     };
 
     handleToggle = () => {
@@ -75,7 +85,9 @@ class App extends Component {
                         <Button>Sample Button</Button>
 
                         <Checkbox onChange={this.handleCheckbox} value="val" checked={this.state.checkbox}>Some Value</Checkbox>
-
+                        <Checkbox indeterminate={this.state.indeterminateBox.indeterminate}
+                                  checked={this.state.indeterminateBox.checked}
+                                  onChange={this.handleIndeterminateBox}>Indeterminate Value</Checkbox>
                         <div className="centered">
                             <Card>
                                 <Card.Header>Header</Card.Header>
